@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1,user-scalable=0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="player.css" />
+    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="./message.css" />
+    <link rel="stylesheet" href="./user-profile.css" />
+    <link rel="stylesheet" href="./music-edit.css" />
+    <link rel="stylesheet" href="./single-track.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="registration">
+        <form action="#" class="login-form">
+          <input type="text" placeholder="Имя пользователя">
+          <input type="email" placeholder="Email">
+          <input type="date">
+          <select name="user-role" id="user-role-select">
+            <option value="">--Выбрать роль на сайте--</option>
+            <option value="musician">Музыкант</option>
+            <option value="listener">Слушатель</option>
+          </select>
+          <input type="submit" value="Зарегистрироваться">
+        </form>
+      </div>
+      <!-- <div class="fixed-header">
+
+        </div> -->
+      <div class="main_grid">
+        <nav class="left_menu">
+          <div class="login-block">
+            <button class="login-button sign-in featured-card_button">Регистрация</button>
+            <button class="login-button sign-up featured-card_button">Войти</button>
+          </div>
+          <a href="#" class="main-menu_link">
+            <img
+              src="./img/icons/profile.png"
+              alt=""
+              class="main-menu_icon"
+            />Профиль</a
+          >
+          <a href="#" class="main-menu_link">
+            <img
+              src="./img/icons/mail.png"
+              alt=""
+              class="main-menu_icon"
+            />Сообщения</a
+          >
+          <a href="#" class="main-menu_link">
+            <img src="./img/icons/music.png" alt="" class="main-menu_icon" />Моя
+            музыка</a
+          >
+          <!-- <a href="#" class="main-menu_link">
+            <img
+              src="./img/icons/settings.png"
+              alt=""
+              class="main-menu_icon"
+            />Настройки</a
+          > -->
+          <input
+            type="search"
+            name="search"
+            id="search-input"
+            placeholder="Поиск"
+            class="search-section"
+          />
+          <select name="track-style-filter" id="tsf" class="style-filter">
+            <option value="">-- фильтр по стилю --</option>
+            <option value="trance">Trance</option>
+            <option value="house">House</option>
+            <option value="techno">Techno</option>
+            <option value="pop">Pop</option>
+          </select>
+        </nav>
+        <div class="main_content">
+          <div class="featured-content">
+            <h2 class="featured-content_title">Популярные музыканты</h2>
+            <div class="featured-content_grid">
+              <div class="featured-card">
+                <img
+                  src="./img/icons/user_img.png"
+                  alt="user avatar"
+                  class="user_image"
+                />
+                <div class="user-description">
+                  <p class="user_about">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    aspernatur deleniti labore ducimus quam.
+                  </p>
+                  <button class="featured-card_button">На страницу</button>
+                </div>
+              </div>
+              <div class="featured-card">
+                <img
+                  src="./img/icons/user_img.png"
+                  alt="user avatar"
+                  class="user_image"
+                />
+                <div class="user-description">
+                  <p class="user_about">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    aspernatur deleniti labore ducimus quam.
+                  </p>
+                  <button class="featured-card_button">На страницу</button>
+                </div>
+              </div>
+              <div class="featured-card">
+                <img
+                  src="./img/icons/user_img.png"
+                  alt="user avatar"
+                  class="user_image"
+                />
+                <div class="user-description">
+                  <p class="user_about">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    aspernatur deleniti labore ducimus quam.
+                  </p>
+                  <button class="featured-card_button">На страницу</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-content">
+            <h2 class="featured-content_title">Популярные треки</h2>
+            <div class="featured-content_grid featured-music">
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track namedfsdfsdfsdfs dfsdfsd fsdfsdf
+                      sdfsdfsdfsdfsdfsdfsdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist fdh hg dfgh dfg h name</a
+                    >
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-content">
+            <h2 class="featured-content_title">Новые треки</h2>
+            <div class="featured-content_grid featured-music">
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name">Track name</a>
+                    <a href="#" class="track-artist">Artist name</a>
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track namedfsdfsdfsdfs dfsdfsd fsdfsdf
+                      sdfsdfsdfsdfsdfsdfsdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist fdh hg dfgh dfg h name</a
+                    >
+                  </div>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile">
+            <div class="profile-content">
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div class="featured-card music-card profile-music-card">
+                <div class="track-main">
+                  <div class="track-art">
+                    <button class="play"></button>
+                  </div>
+                  <div class="track-info">
+                    <a href="#" class="track-name"
+                      >Track name sdfgsdfhdf sgdfsgdf</a
+                    >
+                    <a href="#" class="track-artist"
+                      >Artist name sfgsdfgs sgfs dfg sdf sdfg
+                    </a>
+                  </div>
+                </div>
+                <div class="track-functions">
+                  <div class="function-like"></div>
+                  <div class="function-comment"></div>
+                  <a href="#" class="function-style">Techno</a>
+                </div>
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="profile-side">
+              <div class="profile-img"></div>
+              <h2 class="profile-name">Artist Artistov</h2>
+              <div class="profile-connects">
+                <div class="profile-like"></div>
+                <div class="profile-send-message"></div>
+              </div>
+              <p class="profile-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia explicabo aspernatur aut est dignissimos necessitatibus
+                asperiores esse et tenetur exercitationem aliquam repellat
+                cupiditate, blanditiis autem voluptas voluptate sunt? Omnis vel,
+                eos minima deserunt dolore dolor quis laboriosam aliquid
+                veritatis sunt voluptate culpa est aut quidem ad corporis
+                mollitia minus ab placeat ipsum! Quo maxime tempore aliquam
+                commodi qui nostrum vitae quam modi facilis alias laborum
+                sapiente placeat quisquam, eveniet nemo distinctio excepturi
+                mollitia neque nihil quidem quaerat consectetur voluptas
+                doloribus. Suscipit id expedita consequuntur incidunt
+                voluptatum, repellat at deleniti quam quo eaque rem debitis
+                eveniet! Quidem non, voluptate officia expedita optio doloremque
+                iste natus quia omnis maiores perferendis eveniet esse alias
+                eius at assumenda harum? Saepe veritatis, esse maiores facilis
+                vitae commodi nesciunt iste officia placeat corporis dolore
+                quisquam ad tempora, sequi beatae exercitationem eveniet numquam
+                aperiam sed praesentium minus, recusandae vel facere? Placeat
+                delectus, numquam ut iste inventore vitae, asperiores voluptates
+                ad molestiae rem molestias fuga non possimus adipisci quaerat ex
+                soluta eligendi! Earum similique, possimus omnis consequatur,
+                sunt eos corporis, sit est neque ea ducimus facilis consequuntur
+                sed maiores quas quaerat tenetur quasi iste esse aut nulla
+                libero dolorum. Tempora rem illum qui at eveniet mollitia id,
+                dolor officiis consectetur vero harum soluta earum labore
+                laboriosam praesentium quis distinctio explicabo voluptatem
+                omnis delectus? Praesentium dolorum perferendis dicta facilis
+                beatae quas quod eaque doloribus consequuntur quaerat labore,
+                architecto veritatis dignissimos aliquam? Labore incidunt
+                excepturi amet eligendi aperiam quasi aliquam laboriosam
+                consequatur, autem, vel facere esse consectetur magni velit sed
+                praesentium corrupti doloremque explicabo, suscipit aspernatur!
+                Itaque, asperiores perspiciatis quis maiores reiciendis iure.
+                Molestias sequi aut placeat laudantium consequuntur debitis.
+                Obcaecati, beatae blanditiis tenetur adipisci nostrum nulla iste
+                debitis officiis rem deleniti consequatur possimus aspernatur
+                esse vero tempora distinctio, minus maxime. Rem tempora
+                quibusdam doloremque pariatur harum nihil voluptatum excepturi!
+              </p>
+              <div class="profile-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">VK</a>
+                <a href="#" class="social-link">Youtube</a>
+              </div>
+            </div>
+          </div>
+          <div class="message">
+            <div class="message-units">
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+              <div class="message-single-unit">
+                <div class="message-user">
+                  <a href="#" class="message-avatar"> </a>
+                </div>
+                <div class="message-info">
+                  <a href="#" class="message-user-name">Artist artistov</a>
+                  <p class="message-text-last">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Alias, eveniet!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="message-space">
+              <div class="message-read-section">
+                <div class="message-from-user">
+                  <a class="from-user-avatar" href="#"></a>
+                  <p class="from-user-message-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Unde ipsam explicabo reiciendis eaque inventore consequatur
+                    neque rerum porro nobis debitis!
+                  </p>
+                </div>
+                <div class="message-from-user">
+                  <div class="from-user-avatar"></div>
+                  <p class="from-user-message-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Unde ipsam explicabo reiciendis eaque inventore consequatur
+                    neque rerum porro nobis debitis! Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Rerum alias eum vitae quod
+                    provident, distinctio consequuntur assumenda quam nesciunt
+                    cum voluptatum necessitatibus veritatis repudiandae qui quo
+                    saepe quibusdam quidem ratione maiores libero sunt
+                    molestiae. Incidunt tempore, aliquid placeat in quae enim
+                    pariatur quasi dolor ducimus totam quaerat, asperiores vitae
+                    eos excepturi voluptatem et aliquam ea necessitatibus! Velit
+                    nulla aliquam commodi inventore quis voluptatibus temporibus
+                    odio rerum quae, ipsam nesciunt. Tenetur dolore ipsum
+                    provident et beatae quidem voluptate aliquam vero
+                    voluptatibus quibusdam explicabo necessitatibus itaque
+                    cumque quo omnis, vitae illo. Vitae dicta mollitia eligendi,
+                    saepe molestiae dolor dolorum laboriosam corporis maiores!
+                  </p>
+                </div>
+                <div class="message-from-user message-to-user">
+                  <div class="from-user-avatar"></div>
+                  <p class="from-user-message-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Unde ipsam explicabo reiciendis eaque inventore consequatur
+                    neque rerum porro nobis debitis! Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Rerum alias eum vitae quod
+                    provident, distinctio consequuntur assumenda quam nesciunt
+                    cum voluptatum necessitatibus veritatis repudiandae qui quo
+                    saepe quibusdam quidem ratione maiores libero sunt
+                    molestiae. Incidunt tempore, aliquid placeat in quae enim
+                    pariatur quasi dolor ducimus totam quaerat, asperiores vitae
+                    eos excepturi voluptatem et aliquam ea necessitatibus! Velit
+                    nulla aliquam commodi inventore quis voluptatibus temporibus
+                    odio rerum quae, ipsam nesciunt. Tenetur dolore ipsum
+                    provident et beatae quidem voluptate aliquam vero
+                    voluptatibus quibusdam explicabo necessitatibus itaque
+                    cumque quo omnis, vitae illo. Vitae dicta mollitia eligendi,
+                    saepe molestiae dolor dolorum laboriosam corporis maiores!
+                  </p>
+                </div>
+              </div>
+              <div class="message-send-section">
+                <textarea
+                  name="message-input"
+                  id="message-user-text"
+                  cols="30"
+                  rows="5"
+                ></textarea>
+                <button class="send-message">Отправить</button>
+              </div>
+            </div>
+          </div>
+          <div class="profile user-profile">
+            <div class="profile-content user-profile-content">
+              <div class="featured-content user-content">
+                <h2 class="featured-content_title">Понравившиеся треки</h2>
+                <div
+                  class="featured-content_grid featured-music user-profile-music"
+                >
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="featured-card music-card">
+                    <div class="track-main">
+                      <div class="track-art">
+                        <button class="play"></button>
+                      </div>
+                      <div class="track-info">
+                        <a href="#" class="track-name">Track name</a>
+                        <a href="#" class="track-artist">Artist name</a>
+                      </div>
+                    </div>
+                    <div class="track-functions">
+                      <div class="function-like"></div>
+                      <div class="function-comment"></div>
+                      <a href="#" class="function-style">Techno</a>
+                    </div>
+                    <div class="sliders">
+                      <input
+                        type="range"
+                        class="seek-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile-side user-profile-info">
+              <div class="profile-img"></div>
+              <h2 class="profile-name">User Userov</h2>
+              <div class="profile-connects">
+                <div class="profile-like">
+                  <p class="profile-like-count">137</p>
+                </div>
+                <div class="profile-send-message"></div>
+              </div>
+              <p class="profile-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia explicabo aspernatur aut est dignissimos necessitatibus
+                asperiores esse et tenetur exercitationem aliquam repellat
+                cupiditate, blanditiis autem voluptas voluptate sunt? Omnis vel,
+                eos minima deserunt dolore dolor quis laboriosam aliquid
+                veritatis sunt voluptate culpa est aut quidem ad corporis
+                mollitia minus ab placeat ipsum! Quo maxime tempore aliquam
+                commodi qui nostrum vitae quam modi facilis alias laborum
+                sapiente placeat quisquam, eveniet nemo distinctio excepturi
+                mollitia neque nihil quidem quaerat consectetur voluptas
+                doloribus. Suscipit id expedita consequuntur incidunt
+                voluptatum, repellat at deleniti quam quo eaque rem debitis
+                eveniet! Quidem non, voluptate officia expedita optio doloremque
+                iste natus quia omnis maiores perferendis eveniet esse alias
+                eius at assumenda harum? Saepe veritatis, esse maiores facilis
+                vitae commodi nesciunt iste officia placeat corporis dolore
+                quisquam ad tempora, sequi beatae exercitationem eveniet numquam
+                aperiam sed praesentium minus, recusandae vel facere? Placeat
+                delectus, numquam ut iste inventore vitae, asperiores voluptates
+                ad molestiae rem molestias fuga non possimus adipisci quaerat ex
+                soluta eligendi! Earum similique, possimus omnis consequatur,
+                sunt eos corporis, sit est neque ea ducimus facilis consequuntur
+                sed maiores quas quaerat tenetur quasi iste esse aut nulla
+                libero dolorum. Tempora rem illum qui at eveniet mollitia id,
+                dolor officiis consectetur vero harum soluta earum labore
+                laboriosam praesentium quis distinctio explicabo voluptatem
+                omnis delectus? Praesentium dolorum perferendis dicta facilis
+                beatae quas quod eaque doloribus consequuntur quaerat labore,
+                architecto veritatis dignissimos aliquam? Labore incidunt
+                excepturi amet eligendi aperiam quasi aliquam laboriosam
+                consequatur, autem, vel facere esse consectetur magni velit sed
+                praesentium corrupti doloremque explicabo, suscipit aspernatur!
+                Itaque, asperiores perspiciatis quis maiores reiciendis iure.
+                Molestias sequi aut placeat laudantium consequuntur debitis.
+                Obcaecati, beatae blanditiis tenetur adipisci nostrum nulla iste
+                debitis officiis rem deleniti consequatur possimus aspernatur
+                esse vero tempora distinctio, minus maxime. Rem tempora
+                quibusdam doloremque pariatur harum nihil voluptatum excepturi!
+              </p>
+              <div class="profile-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">VK</a>
+                <a href="#" class="social-link">Youtube</a>
+              </div>
+            </div>
+          </div>
+          <div class="music-edit">
+            <div class="upload-file-section">
+              <h2 class="featured-content_title">Загрузить</h2>
+              <form action="#" class="file-upload" id="send-file">
+                <input type="file" id="file-upload-input" />
+              </form>
+            </div>
+            <h2 class="featured-content_title">Моя музыка</h2>
+            <div class="featured-card music-card">
+              <div class="track-main">
+                <div class="track-art track-art-edit">
+                  <button class="cover-edit">Изменить</button>
+                </div>
+                <div class="track-info track-info-edit">
+                  <a href="#" class="track-name">Track name</a>
+                  <div class="track-name-edit"></div>
+                  <select name="style" id="style-edit">
+                    <option value="">--- Выбрать жанр ---</option>
+                    <option value="trance">Trance</option>
+                    <option value="techno">Techno</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="featured-card music-card">
+              <div class="track-main">
+                <div class="track-art track-art-edit">
+                  <button class="cover-edit">Изменить</button>
+                </div>
+                <div class="track-info track-info-edit">
+                  <a href="#" class="track-name">Track name</a>
+                  <div class="track-name-edit"></div>
+                  <select name="style" id="style-edit">
+                    <option value="">--- Выбрать жанр ---</option>
+                    <option value="trance">Trance</option>
+                    <option value="techno">Techno</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="single-track">
+            <div class="single-track-card">
+              
+              <div class="single-track-main">
+                <img
+                  src="./img/icons/album.png"
+                  alt="track cover"
+                  class="single-track-image"
+                />
+              </div>
+              <div class="single-track-control">
+                <div class="single-track-info">
+                  <a href="#" class="artist-name">Artist name</a>
+                  <a href="#" class="track-name">Track name</a>
+                </div>
+                <button class="button button-play"></button>
+                <!-- <button class="button button-stop"></button> -->
+                <div class="sliders">
+                  <input
+                    type="range"
+                    class="seek-slider"
+                    min="0"
+                    max="100"
+                    value="0"
+                  />
+                </div>
+              </div>
+              
+            </div>
+            <div class="comment-section">
+              <ul class="comment-base">
+                <li class="single-comment-unit">
+                  <div class="single-comment">
+                    <a href="#" class="author-link"></a>
+                    <p class="comment-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa odit quae quasi tempora cumque, dolor placeat id
+                      rerum perspiciatis quidem. Lorem ipsum dolor sit amet,
+                      consectetur adipisicing elit. Illo officiis debitis quis
+                      perferendis sunt nostrum vitae repudiandae magnam nemo,
+                      dolorum dignissimos, rem assumenda autem quos, possimus
+                      mollitia adipisci officia dolorem labore eveniet.
+                      Explicabo quibusdam ipsa, illo similique labore officiis
+                      modi? Iure reiciendis vitae officiis mollitia veritatis,
+                      amet quaerat optio. Tenetur.
+                    </p>
+                  </div>
+                  <button class="reply">Ответить</button>
+                </li>
+                <li class="single-comment-unit">
+                  <div class="single-comment">
+                    <a href="#" class="author-link"></a>
+                    <p class="comment-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Culpa odit quae quasi tempora cumque, dolor placeat id
+                      rerum perspiciatis quidem. Lorem ipsum dolor sit amet,
+                      consectetur adipisicing elit. Illo officiis debitis quis
+                      perferendis sunt nostrum vitae repudiandae magnam nemo,
+                      dolorum dignissimos, rem assumenda autem quos, possimus
+                      mollitia adipisci officia dolorem labore eveniet.
+                      Explicabo quibusdam ipsa, illo similique labore officiis
+                      modi? Iure reiciendis vitae officiis mollitia veritatis,
+                      amet quaerat optio. Tenetur.
+                    </p>
+                  </div>
+                  <button class="reply">Ответить</button>
+                </li>
+
+              </ul>
+              <div class="message-send-section comment-section">
+                <textarea
+                  name="message-input"
+                  id="message-user-text"
+                  cols="30"
+                  rows="5"
+                ></textarea>
+                <button class="send-message">Оставить комментарий</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js.js"></script>
+  </body>
+</html>

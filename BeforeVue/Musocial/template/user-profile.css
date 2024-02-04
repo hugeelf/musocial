@@ -1,0 +1,15 @@
+.user-profile-content{
+    grid-template-columns: 1fr;
+}
+.user-profile-music{
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+.profile-like{
+    position: relative;
+}
+.profile-like-count{
+    position: absolute;
+    top: 4px;
+    position: absolute;
+    left: -35px;
+}

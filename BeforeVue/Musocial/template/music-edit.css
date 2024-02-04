@@ -1,0 +1,45 @@
+.music-edit {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* .upload-file-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 20px;
+} */
+.upload-file-section{
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.file-upload{
+  display: flex;
+  justify-content: center;
+}
+.track-art-edit{
+    height: 100px;
+    width: 100px;
+    align-items: end;
+}
+.cover-edit{
+    padding: 5px 10px;
+    border: transparent;
+    cursor: pointer;
+}
+.track-info-edit {
+  flex-direction: row;
+  gap: 10px;
+}
+.track-name-edit {
+  max-height: 20px;
+  max-width: 20px;
+    content: url(./img/icons/edit.svg);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+select{
+    outline: none;
+}

@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  padding: 10px 10px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.registration{
+  display: flex;
+  justify-content: center;
+}
+.login-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* .fixed-header {
+  height: 40px;
+  margin: 0 auto;
+  max-width: 1280px;
+  background-color: aqua;
+} */
+.main_grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 12fr;
+  gap: 10px;
+}
+.menu-side,
+.main_content {
+  height: fit-content;
+}
+.left_menu,
+.main_content {
+  border: 1px solid rgba(174, 183, 194, 0.12);
+  border-radius: 4px;
+}
+.left_menu {
+  top: 10px;
+  position: sticky;
+  align-self: start;
+  /* height: fit-content; */
+  border: none;
+  display: grid;
+  gap: 5px;
+}
+.main-menu_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0 10px 5px;
+  border-radius: 4px;
+}
+.login-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #344054;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-menu_link:hover {
+  color: #64748b;
+  background: rgba(174, 183, 194, 0.12);
+}
+.main-menu_icon {
+  max-height: 20px;
+  /* display: none; */
+}
+.search-section,
+.style-filter {
+  padding: 5px 10px;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px 0 10px 5px;
+}
+.main_content {
+  padding: 10px;
+  display: grid;
+  gap: 40px;
+}
+.featured-content_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+.user_image {
+  max-width: 250px;
+}
+.user-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.featured-card_button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: rgba(174, 183, 194, 0.12);
+}
+.featured-card_button:hover {
+  color: #64748b;
+}

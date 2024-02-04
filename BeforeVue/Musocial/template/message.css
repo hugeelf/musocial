@@ -1,0 +1,91 @@
+.message {
+  display: grid;
+  grid-template-columns: 3fr 12fr;
+  max-height: 500px;
+}
+.message-units {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 10px;
+  position: sticky;
+  align-self: start;
+  height: fit-content;
+  border: none;
+  max-height: 500px;
+  overflow: auto;
+}
+.message-space{
+    max-height: 500px;
+    padding-left: 10px;
+    /* overflow: auto; */
+}
+.message-single-unit {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.message-avatar {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./img/icons/profile.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.message-info {
+  display: flex;
+  flex-direction: column;
+}
+.message-text-last {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message-read-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+    height: 420px;
+    padding-bottom: 40px;
+}
+.message-from-user{
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid rgba(174, 183, 194, 0.12);
+    max-width: 47%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.message-to-user{
+    align-self: flex-end;
+}
+.from-user-avatar{
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url(./img/icons/profile.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.message-send-section{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    outline: none;
+}
+.send-message{
+    padding: 10px 15px;
+}

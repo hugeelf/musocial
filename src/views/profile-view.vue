@@ -2,26 +2,28 @@
     <div>
         <div class="profile">
             <div class="profile-content">
-                <div v-for="track in getUser[0].tracks" :key="track.trackId"
-                    class="featured-card music-card profile-music-card">
+                <div class="featured-card music-card profile-music-card" v-for="track in getUserInfo.tracks"
+                    :key="track.trackId">
                     <div class="track-main">
                         <div class="track-art" :style="{ backgroundImage: 'url(' + track.trackCover + ')' }">
-                            <button class="play"></button>
+                            <button class="play" @click="play(track.trackId)"></button>
                         </div>
                         <div class="track-info">
                             <router-link :to="'/track/' + track.trackId" class="track-name">{{ track.trackTitle
                             }}</router-link>
-                            <router-link :to="'/profile/' + getUser[0].userId" class="track-artist">{{ getUser[0].userName
+                            <router-link :to="'/profile/' + getUserInfo.userId" class="track-artist">{{
+                                getUserInfo.userName
                             }}</router-link>
                         </div>
                     </div>
                     <div class="track-functions">
 
-                        <div class="function-like" :class="(getUser[0].userId === currentUser.id) ? 'hide' : ''"
-                            @click="like(track.trackId)">
-                            <svg class="like" :class="getLikedTracksIds.includes(track.trackId) ? 'liked' : ''"
-                                width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
-                                id="Stock_cut" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        <div class="function-like"
+                            :class="(getUserInfo.userId === currentUser.id) ? 'hide' : ''"
+                            @click="likeTrack(track.trackId)">
+                            <svg class="like" :class="getLikedTracks.includes(track.trackId) ? 'liked' : ''" width="800px"
+                                height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut"
+                                version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <desc />
                                 <path
@@ -34,24 +36,23 @@
                         <!-- need router-link -->
                         <a href="#" class="function-style">{{ track.trackStyle }}</a>
                     </div>
-                    <!-- <div class="sliders">
-                        <input type="range" class="seek-slider" min="0" max="100" value="0" />
-                    </div> -->
                 </div>
-
             </div>
             <div class="profile-side">
-                <div class="profile-img" :style="{ backgroundImage: 'url(' + getUser[0].userAvatar + ')' }"></div>
-                <h2 class="profile-name">{{ getUser[0].userName }}</h2>
+                <div class="profile-img" :style="{ backgroundImage: 'url(' + getUserInfo.userAvatar + ')' }">
+                </div>
+                <h2 class="profile-name">{{ getUserInfo.userName }}</h2>
                 <div class="profile-connects">
                     <div class="profile-like"> </div>
                     <div class="profile-send-message"></div>
                 </div>
-                <p class="profile-info">{{ getUser[0].userBio }}
+                <p class="profile-info">{{ getUserInfo.userBio }}
                 </p>
                 <div class="profile-links">
-                    <a v-for="(socialLink, socialName, index) in getUser[0].socialLinks" :key="index" :href="socialLink"
-                        class="social-link" target="_blank" style="text-transform: uppercase;">{{ socialName }}
+                    <a v-for="(socialLink, socialName, index) in getUserInfo.socialLinks" :key="index"
+                        :href="socialLink" class="social-link" target="_blank" style="text-transform: uppercase;">{{
+                            socialName
+                        }}
                     </a>
                 </div>
             </div>
@@ -60,7 +61,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { mapMutations } from 'vuex';
+import { mapActions } from 'vuex';
 export default {
     name: 'MusicsocialProfileView',
 
@@ -68,32 +71,22 @@ export default {
         return {
         };
     },
-
     computed: {
-        getUser() {
-            return this.$store.getters.getUser(this.$route.params.id)
-        },
-        currentUser() {
-            return this.$store.getters.currentUser
-        },
-        getLikedTracksIds() {
-            return this.$store.getters.getLikedTracksByCurrentUser
+        ...mapGetters(['getUserInfoFromState', 'currentUser', 'getLikedTracks']),
+        getUserInfo(){
+            return this.getUserInfoFromState(this.$route.params.id)
         }
     },
-    beforeMount() {
-        window.scrollTo(0, 0)
-    },
-    mounted() {
+
+    created() {
+        // console.log(this.getUserInfo(this.userProfile));
     },
 
     methods: {
-        ...mapMutations(['likeTrack']),
-        like(id) {
-            this.likeTrack(id)
-        }
+        ...mapActions(['play']),
+        ...mapMutations(['likeTrack'])
     },
 };
-
 </script>
 
 <style lang="scss">

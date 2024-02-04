@@ -1,0 +1,69 @@
+.single-track {
+  display: flex;
+  flex-direction: column;
+}
+.single-track-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.single-track-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.single-track-image {
+  max-width: 200px;
+}
+.button-stop,
+.button-play {
+  padding: 10px 20px;
+  max-width: 20px;
+}
+.single-track-control {
+  max-width: 250px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.comment-section,
+.comment-base {
+  list-style-type: none;
+}
+.comment-base {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.author-link {
+  /* display: block; */
+  height: 50px;
+  width: 50px;
+  background-image: url(./img/icons/profile.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid rgba(174, 183, 194, 0.12);
+  flex-shrink: 0;
+}
+.single-comment-unit {
+  padding: 10px 0;
+}
+.single-comment {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: start;
+}
+
+.reply {
+  float: right;
+}
+.comment-section {
+  padding: 10px 0;
+}

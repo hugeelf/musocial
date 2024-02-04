@@ -1,0 +1,95 @@
+.profile{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+}
+.profile-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.profile-side{
+    height: fit-content;
+    top: 22px;
+    position: sticky;
+    align-self: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.profile-img{
+    width: 200px;
+    height: 200px;
+    background-image: url(./img/icons/profile.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid rgba(174, 183, 194, 0.12);
+
+}
+.profile-connects{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.profile-like, .profile-send-message{
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+}
+.profile-like:hover, .profile-send-message:hover{
+    cursor: pointer;
+}
+.profile-like{
+    background-image: url(./img/icons/like.svg);
+}
+.profile-send-message{
+    background-image: url(./img/icons/mail.png);
+}
+.profile-info{
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.profile-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.track-functions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.function-like, .function-comment{
+    width: 15px;
+    height: 15px;
+    background-position: center;
+    background-size: contain;
+}
+.function-like:hover, .function-comment:hover{
+    cursor: pointer;
+}
+.function-like{
+    background-image: url(./img/icons/like.svg);
+}
+.function-comment{
+    background-image: url(./img/icons/comment.svg);
+}
+.social-link{
+    border: 1px solid rgba(174, 183, 194, 0.12);
+    padding: 10px;
+}

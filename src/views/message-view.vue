@@ -2,9 +2,9 @@
     <div>
         <div class="message">
             <div class="message-units">
-                <div v-for="message in getUser[0].messages" :key="message.withUser" class="message-single-unit">
+                <div v-for="message in getUserInfo.messages" :key="message.withUser" class="message-single-unit">
                     <div class="message-user">
-                        <a :href="'/profile/' + message.withUser" class="message-avatar"></a>
+                        <router-link :to="'/profile/' + message.withUser" class="message-avatar" :style="{ backgroundImage: 'url(' + getUserInfoFromState(message.withUser).userAvatar + ')' }"></router-link>
                     </div>
                     <div class="message-info">
                         <p class="message-user-name" @click="getDialog(message.withUser)">{{ message.withUser }}</p>
@@ -18,7 +18,7 @@
                 <div class="message-read-section">
                     <div v-for="msg in currentDialog" :key="msg.id" class="message-from-user"
                         :class="(msg.sender === currentUser.id) ? 'message-to-user' : ''">
-                        <a class="from-user-avatar" :href="'/profile/' + dialogWithUserId"></a>
+                        <router-link class="from-user-avatar" :to="'/profile/' + dialogWithUserId" :style="{ backgroundImage: 'url(' + getUserInfoFromState(msg.sender).userAvatar + ')' }"></router-link>
                         <p class="from-user-message-text">
                             {{ msg.content }}
                         </p>
@@ -30,7 +30,8 @@
                     <textarea v-model="messageForSend" name="message-input" id="message-user-text" cols="30" rows="5"
                         maxlength="1000" minlength="3"
                         placeholder="Набери сообщение тут, но помни - не менее 3-х символов"></textarea>
-                    <button class="send-message" @click="sendMessage" :disabled="messageForSend.length < 3">Отправить</button>
+                    <button class="send-message" @click="sendMessage"
+                        :disabled="messageForSend.length < 3">Отправить</button>
                 </div>
             </div>
         </div>
@@ -38,37 +39,33 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { mapMutations } from 'vuex';
-
 export default {
-    name: 'MusicsocialMessagesContent',
+    name: 'MusicsocialMessageView',
+
     data() {
         return {
             currentDialog: {},
             dialogWithUserId: '',
             messageForSend: '',
-
         };
     },
-    computed: {
-        // mapGetters(['getUser']),
-        getUser() {
-            return this.$store.getters.getUser(this.currentUser.id)
-        },
-        currentUser() {
-            return this.$store.getters.currentUser
-        },
-        allDialogs() { return this.getUser[0].messages },
-    },
-    beforeMount() {
-        window.scrollTo(0, 0)
-    },
+
     mounted() {
+
     },
+    computed: {
+        ...mapGetters(['getUserInfoFromState', 'currentUser']),
+        getUserInfo() {
+            return this.getUserInfoFromState(this.currentUser.id)
+        },
+    },
+
     methods: {
         ...mapMutations(['addMessage']),
         getDialog: function (withUserId) {
-            this.allDialogs.forEach(element => {
+            this.getUserInfo.messages.forEach(element => {
                 if (element.withUser === withUserId) {
                     this.currentDialog = element.dialog
                     this.dialogWithUserId = withUserId
@@ -117,7 +114,6 @@ export default {
     gap: 10px;
     max-height: 94vh;
     min-height: 94vh;
-    /* overflow: auto; */
 }
 
 .message-single-unit {
@@ -131,10 +127,10 @@ export default {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../assets/img/icons/profile.png);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
 .message-info {
@@ -177,10 +173,13 @@ export default {
     flex-shrink: 0;
     width: 25px;
     height: 25px;
-    background-image: url(../assets/img/icons/profile.png);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 50%;
+}
+.from-user-message-text{
+    max-width: 250px;
 }
 
 .message-send-section {
@@ -199,4 +198,5 @@ textarea {
 .send-message {
     padding: 10px 15px;
     border: 1px solid;
-}</style>
+}
+</style>

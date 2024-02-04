@@ -1,29 +1,24 @@
 <template>
     <div>
-        <featuredArtists />
-        <featuredMusic />
-        <newMusic />
+        <featuredArtistList />
+        <topTracks />
     </div>
 </template>
 
 <script>
-import featuredArtists from '@/components/featured-artists.vue';
-import featuredMusic from '@/components/featured-tracks.vue'
-import newMusic from '@/components/new-tracks.vue'
+import featuredArtistList from '@/components/item-components/featured-artist-list.vue';
+import topTracks from '@/components/item-components/top-tracks.vue';
 export default {
     name: 'MusicsocialMainContent',
+
     components: {
-        featuredArtists,
-        featuredMusic,
-        newMusic
+        featuredArtistList,
+        topTracks
     },
     data() {
         return {
 
         };
-    },
-    beforeMount() {
-        window.scrollTo(0, 0)
     },
 
     mounted() {
@@ -61,6 +56,7 @@ export default {
     align-items: center;
     gap: 5px;
     padding: 10px 0;
+    min-width: 270px;
 }
 
 .user-image {
