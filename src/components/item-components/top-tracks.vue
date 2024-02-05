@@ -95,4 +95,7 @@ export default {
 </script>
 
 <style lang="scss">
+.function-style{
+    max-width: 100px;
+}
 </style>

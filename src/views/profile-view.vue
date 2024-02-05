@@ -92,14 +92,12 @@ export default {
 <style lang="scss">
 .profile {
     display: grid;
-    grid-template-columns: 3fr minmax(200px, 1fr);
     gap: 40px;
 }
 
 .profile-content {
     display: grid;
     grid-template-columns: 1fr minmax(250px, 1fr);
-    gap: 40px;
     height: fit-content;
 }
 

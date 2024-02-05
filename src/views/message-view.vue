@@ -4,7 +4,8 @@
             <div class="message-units">
                 <div v-for="message in getUserInfo.messages" :key="message.withUser" class="message-single-unit">
                     <div class="message-user">
-                        <router-link :to="'/profile/' + message.withUser" class="message-avatar" :style="{ backgroundImage: 'url(' + getUserInfoFromState(message.withUser).userAvatar + ')' }"></router-link>
+                        <router-link :to="'/profile/' + message.withUser" class="message-avatar"
+                            :style="{ backgroundImage: 'url(' + getUserInfoFromState(message.withUser).userAvatar + ')' }"></router-link>
                     </div>
                     <div class="message-info">
                         <p class="message-user-name" @click="getDialog(message.withUser)">{{ message.withUser }}</p>
@@ -18,7 +19,8 @@
                 <div class="message-read-section">
                     <div v-for="msg in currentDialog" :key="msg.id" class="message-from-user"
                         :class="(msg.sender === currentUser.id) ? 'message-to-user' : ''">
-                        <router-link class="from-user-avatar" :to="'/profile/' + dialogWithUserId" :style="{ backgroundImage: 'url(' + getUserInfoFromState(msg.sender).userAvatar + ')' }"></router-link>
+                        <router-link class="from-user-avatar" :to="'/profile/' + dialogWithUserId"
+                            :style="{ backgroundImage: 'url(' + getUserInfoFromState(msg.sender).userAvatar + ')' }"></router-link>
                         <p class="from-user-message-text">
                             {{ msg.content }}
                         </p>
@@ -87,7 +89,6 @@ export default {
 <style lang="scss">
 .message {
     display: grid;
-    grid-template-columns: 3fr 12fr;
     max-height: 500px;
 }
 
@@ -178,8 +179,11 @@ export default {
     background-repeat: no-repeat;
     border-radius: 50%;
 }
-.from-user-message-text{
+
+.from-user-message-text {
     max-width: 250px;
+    padding-right: 10px;
+    word-break: break-all;
 }
 
 .message-send-section {
@@ -199,4 +203,9 @@ textarea {
     padding: 10px 15px;
     border: 1px solid;
 }
-</style>
+
+.send-message:active {
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+}</style>

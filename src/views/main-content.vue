@@ -40,7 +40,6 @@ export default {
 
 .featured-content_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -56,7 +55,7 @@ export default {
     align-items: center;
     gap: 5px;
     padding: 10px 0;
-    min-width: 270px;
+    min-width: 250px;
 }
 
 .user-image {
@@ -164,4 +163,45 @@ export default {
 .track-artist {
     max-width: 150px;
 }
-</style>
+
+@media (min-width: 1024px) {
+    .featured-content_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .profile{
+        grid-template-columns: 3fr minmax(200px, 1fr);
+    }
+    .profile-content{
+        gap: 40px;
+    }
+    .message{
+        grid-template-columns: 3fr 12fr;
+    }
+}
+
+@media (max-width: 1023px) {
+    // *{
+    //     font-size: 99%;
+    // }
+
+    .featured-content_grid {
+        align-items: center;
+    }
+
+    .user-image {
+        max-height: 200px;
+        max-width: 300px;
+    }
+    .featured-music {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+    .profile{
+        grid-template-rows: 1fr;
+    }
+    .profile-content{
+        gap: 5px
+    }
+    .message{
+        grid-template-columns: 4fr 10fr;
+    }
+}</style>

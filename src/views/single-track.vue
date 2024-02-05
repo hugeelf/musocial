@@ -229,7 +229,9 @@ export default {
     gap: 10px;
     align-items: flex-start;
 }
-
+.comment-text{
+    max-width: 250px;
+}
 .reply {
     float: right;
 }

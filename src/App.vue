@@ -232,10 +232,8 @@ legend {
   height: fit-content;
 }
 
-.left_menu,
-.main_content {
-  border: 1px solid rgba(174, 183, 194, 0.12);
-  border-radius: 4px;
+.left_menu {
+  border-right: 1px solid black;
 }
 
 .left_menu {
