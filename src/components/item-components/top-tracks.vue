@@ -42,7 +42,7 @@
                     <div class="track-info">
                         <router-link :to="'/track/' + newTrack.trackId" class="track-name">{{ newTrack.trackTitle
                         }}</router-link>
-                        <router-link :to="'/profile' + newTrack.userId" class="track-artist">{{ newTrack.userName
+                        <router-link :to="'/profile/' + newTrack.userId" class="track-artist">{{ newTrack.userName
                         }}</router-link>
                         <div class="track-functions">
                             <div class="function-like" @click="likeTrack(newTrack.trackId)">

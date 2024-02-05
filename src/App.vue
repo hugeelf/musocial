@@ -16,7 +16,7 @@
           <img src="./assets/img/icons/music.png" alt="" class="main-menu_icon" />Избранное</router-link>
         <input type="search" name="search" id="search-input" placeholder="Поиск еще не работает" class="search-section" />
         <select name="track-style-filter" id="tsf" class="style-filter">
-          <option value="">фильтр пока не работет</option>
+          <option value="">фильтр еще не работает</option>
           <option v-for="(styles, index) in allowedStyles" :key="index" :value="styles.id">
             <router-link :to="'/styles/' + styles.id"> {{ styles.style }}</router-link>
           </option>
